@@ -1,21 +1,25 @@
-import React, { useState } from 'react'
+import React, { useEffect,useState } from 'react'
 import './App.css'
 import questions from './questionsList'
+import Header from './Header';
+
 
 function App() {
 
   const [showResult, setShowResult] = useState(false);
   const [score,setScore] = useState(0);
   const [currentQuestion,setCurrentQuestion] = useState(1);
-
+  const [timeLeft, setTimeLeft] = useState(10);
 
 
   const optionClicked = (isCorrect)=>{
     if (isCorrect){
       setScore(score+1)
+      setTimeLeft(10);
     }
     if(currentQuestion + 1 < questions.length){
       setCurrentQuestion(currentQuestion+1)
+      setTimeLeft(10);
     }else{
       setShowResult(true)
     }
@@ -24,14 +28,29 @@ function App() {
     setScore(0);
     setCurrentQuestion(0);
     setShowResult(false)
+    setTimeLeft(10);
   }
+
+  useEffect(() => {
+    const countdownTimer = setTimeout(() => {
+      if (timeLeft > 0) {
+        setTimeLeft(timeLeft - 1);
+      } else {
+        if (currentQuestion < questions.length - 1) { 
+          setCurrentQuestion(currentQuestion + 1);
+          setTimeLeft(10);
+        } else {
+          setShowResult(true);
+        }
+      }
+    }, 1000);
+    return () => clearTimeout(countdownTimer);
+  }, [timeLeft, currentQuestion, questions]);
 
 
   return (
     <div className='App'>
-      <h1 className='pt-5 text-success'>Coding Quiz</h1>
-    <h2 className='d-inline mt-4' style={{color:'#fef65b'}}>Current score : {score}</h2>
-
+      <Header time={timeLeft} score={score}/>
       {showResult ?
         <div className='result'>
           <h3 className='text-danger'>Final result</h3>
