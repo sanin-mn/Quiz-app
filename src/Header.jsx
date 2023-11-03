@@ -1,25 +1,27 @@
 import React from 'react'
 import Container from 'react-bootstrap/Container';
 import Navbar from 'react-bootstrap/Navbar';
+import logo from './Assets/logo.png'
+import questions from './questionsList';
 
 function Header(props) {
     return (
         <div>
-            <Navbar className="bg-body-tertiary">
+            <Navbar className="bg-light">
                 <Container>
                     <Navbar.Brand href="#home">
                         <img
                             alt=""
-                            src="/img/logo.svg"
-                            width="30"
-                            height="30"
+                            src={logo}
+                            width="100"
                             className="d-inline-block align-top"
-                        />{' '}
-                        Coding Quiz
+                        />
                     </Navbar.Brand>
-                    <h4 className='' style={{color:'red'}}>Current score : {props.score}</h4>
                     <Navbar.Text>
-                    <h4> {props.time} seconds</h4>
+                    <h5 style={{fontFamily:'monospace'}}>Current score : <span className='text-success'>{ props.score }/{ questions.length }</span></h5>
+                    </Navbar.Text>
+                    <Navbar.Text>
+                    <h5 style={{fontFamily:'monospace'}}><span className='text-danger '>{props.time}</span> seconds</h5>
                     </Navbar.Text>
                 </Container>
             </Navbar>

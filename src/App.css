@@ -1,17 +1,16 @@
 .App{
     text-align: center;
-    background-color: rgb(24, 51, 74);
+    background-color: rgb(233, 233, 233);
     height: 100vh;
 }
 
 .box{
     margin: 0 auto;
 
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(232, 247, 255);
     padding: 16px;
-    border-radius: 14px;
     width: 50%;
-    height: auto;
+    height: 40%;
     box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
     margin-top: 4% ;
 }
@@ -26,19 +25,18 @@ li{
     border: 3px solid white;
     border-radius: .5rem;
     font-size: 20px;
-    margin-top: 8px;
+    margin: 1rem;
     width: 15rem;
 
 }
 .question{
-    color: rgb(255, 0, 0);
-    font-size: 24px;
+   height: 3rem;
 }
 
 .result{
     margin: 0 auto;
 
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(232, 247, 255);
     padding: 16px;
     border-radius: 10px;
     width: 30%;
@@ -57,18 +55,28 @@ cursor:pointer;
         margin-top: 5rem;
         padding: 16px;
         width: fit-content;
-        height: 50%;
+        height: 55%;
         box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
+        background-color: rgb(232, 247, 255);
+
+
     }
     .result{
         margin: 0 auto;
     
-        background-color: rgb(255, 255, 255);
+        background-color: rgb(232, 247, 255);
         padding: 16px;
         border-radius: 10px;
         width: fit-content;
         height: auto;
         box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
         margin-top: 30% ;
+    }
+    li{
+        margin: 0.5rem;
+    }
+
+    .question{
+        margin-bottom: 3rem;
     }
   }
