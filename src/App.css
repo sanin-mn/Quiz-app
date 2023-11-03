@@ -1,13 +1,13 @@
 .App{
     text-align: center;
-    background-color: rgb(233, 233, 233);
+    background-color: #00246B;
     height: 100vh;
 }
 
 .box{
     margin: 0 auto;
 
-    background-color: rgb(232, 247, 255);
+    background-color: #CADCFC;
     padding: 16px;
     width: 50%;
     height: 40%;
@@ -20,14 +20,10 @@ ul{
 }
 
 li{
-    background-color: rgb(255, 196, 0);
     padding: 10px;
-    border: 3px solid white;
-    border-radius: .5rem;
     font-size: 20px;
     margin: 1rem;
     width: 15rem;
-
 }
 .question{
    height: 3rem;
@@ -36,7 +32,7 @@ li{
 .result{
     margin: 0 auto;
 
-    background-color: rgb(232, 247, 255);
+    background-color: #CADCFC;
     padding: 16px;
     border-radius: 10px;
     width: 30%;
@@ -45,9 +41,10 @@ li{
     margin-top: 5% ;
 }
 li:hover{
-background-color: rgb(255, 178, 35);
+background-color: red;
 cursor:pointer;
 }
+
 
 @media screen and (max-width: 480px) {
     .box {
@@ -67,13 +64,14 @@ cursor:pointer;
         background-color: rgb(232, 247, 255);
         padding: 16px;
         border-radius: 10px;
-        width: fit-content;
+        width: max-content;
         height: auto;
         box-shadow: 4px 8px 16px 0 rgba(0, 0, 0, 0.1);
         margin-top: 30% ;
     }
     li{
         margin: 0.5rem;
+        margin-top: 15px;
     }
 
     .question{

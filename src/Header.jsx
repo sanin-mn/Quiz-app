@@ -7,7 +7,7 @@ import questions from './questionsList';
 function Header(props) {
     return (
         <div>
-            <Navbar className="bg-light">
+            <Navbar className="" style={{backgroundColor:'#8AB6f9'}}>
                 <Container>
                     <Navbar.Brand href="#home">
                         <img
@@ -18,10 +18,10 @@ function Header(props) {
                         />
                     </Navbar.Brand>
                     <Navbar.Text>
-                    <h5 style={{fontFamily:'monospace'}}>Current score : <span className='text-success'>{ props.score }/{ questions.length }</span></h5>
+                    <h5 style={{fontFamily:'monospace',color:'black'}}>Current score  <span className='text-success'>{ props.score }/{ questions.length }</span></h5>
                     </Navbar.Text>
                     <Navbar.Text>
-                    <h5 style={{fontFamily:'monospace'}}><span className='text-danger '>{props.time}</span> seconds</h5>
+                    <h5 style={{fontFamily:'monospace'}}><span className='text-danger fw-bold'>{props.time}</span> seconds</h5>
                     </Navbar.Text>
                 </Container>
             </Navbar>
