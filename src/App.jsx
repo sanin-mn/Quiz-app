@@ -9,7 +9,7 @@ function App() {
 
   const [showResult, setShowResult] = useState(false);
   const [score, setScore] = useState(0);
-  const [currentQuestion, setCurrentQuestion] = useState(1);
+  const [currentQuestion, setCurrentQuestion] = useState(0);
   const [timeLeft, setTimeLeft] = useState( 20 );
 
 
@@ -61,7 +61,7 @@ function App() {
           {/* <h5>{score} out of {questions.length} correct ({(score / questions.length) * 100}%)</h5> */}
           <h5 className='font-monospace'>{score} out of {questions.length} correct</h5>
 
-          <button onClick={() => restartGame()} className='btn btn-success mt-3 fw-bold'>Restart Game</button>
+          <button onClick={() => restartGame()} className='btn btn-success mt-3 fw-bold'>Restart Quiz</button>
         </div>
         :
         <div className="box">
