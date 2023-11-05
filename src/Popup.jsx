@@ -38,7 +38,7 @@ function Popup(props) {
                         <Modal.Title className='fw-bold text-danger'>Coding Quiz</Modal.Title>
                     </Modal.Header>
                     <Modal.Body>
-                        <p className='font-monospace'>This is a basic Javascript quiz game, We provided <span className='text-success fw-bold'>10 Questions</span> and <span className='text-danger fw-bold'>20 Seconds</span> for each question answering... <span className='text-info'>All the best 👍</span></p>
+                        <h5 className='font-monospace'>This is a basic Javascript quiz game, We provided <span className='text-success fw-bold'>10 Questions</span> and <span className='text-danger fw-bold'>20 Seconds</span> for each question answering... <span className='text-info'>All the best 👍</span></h5>
                     </Modal.Body>
                     <Modal.Footer>
                         <Button className='tada fw-bold' variant="success" onClick={handleClose}>
